@@ -1,24 +1,22 @@
 import { Module } from '@nestjs/common';
 import { TasksModule } from './tasks/tasks.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { StatusController } from './status/status.controller';
 import { StatusModule } from './status/status.module';
 
 @Module({
   imports: [
-    TasksModule,
     StatusModule,
+    TasksModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: '172.19.0.2',
+      host: 'localhost',
       port: 5432,
-      username: 'admin',
-      password: 'admin',
+      username: 'postgres',
+      password: 'postgres',
       database: 'task-management',
       autoLoadEntities: true,
       synchronize: true,
     }),
-    StatusModule,
   ],
 })
 export class AppModule {}
