@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@nestjs/cli': ^9.0.0
   '@nestjs/common': ^9.0.0
+  '@nestjs/config': ^2.3.0
   '@nestjs/core': ^9.0.0
   '@nestjs/jwt': ^10.0.1
   '@nestjs/passport': ^9.0.0
@@ -40,9 +41,11 @@ specifiers:
   typeorm: ^0.3.10
   typescript: ^4.7.4
   uuid: ^9.0.0
+  zod: ^3.20.2
 
 dependencies:
   '@nestjs/common': 9.2.0_x6yqyveuahcdef4z4mxykmuv6a
+  '@nestjs/config': 2.3.0_2kbkxfsrhtatemqz6dhv2pefvq
   '@nestjs/core': 9.2.0_jfowmhmgk7kwjudosrpv7e7liy
   '@nestjs/jwt': 10.0.1_@nestjs+common@9.2.0
   '@nestjs/passport': 9.0.0_s6va3jdeufsye4wwu25es3p4om
@@ -60,6 +63,7 @@ dependencies:
   rxjs: 7.5.7
   typeorm: 0.3.10_pg@8.8.0+ts-node@10.9.1
   uuid: 9.0.0
+  zod: 3.20.2
 
 devDependencies:
   '@nestjs/cli': 9.1.5
@@ -924,6 +928,22 @@ packages:
       rxjs: 7.5.7
       tslib: 2.4.1
       uuid: 9.0.0
+
+  /@nestjs/config/2.3.0_2kbkxfsrhtatemqz6dhv2pefvq:
+    resolution: {integrity: sha512-VSAqoIagIrc0A3apaqC2O3a8VtQ+asw8xILmxvjK/eHW9m1rmhJ5NqkGf7m+uSv3Yxini4bzyb74Mk62+tB/cA==}
+    peerDependencies:
+      '@nestjs/common': ^7.0.0 || ^8.0.0 || ^9.0.0
+      reflect-metadata: ^0.1.13
+      rxjs: ^6.0.0 || ^7.2.0
+    dependencies:
+      '@nestjs/common': 9.2.0_x6yqyveuahcdef4z4mxykmuv6a
+      dotenv: 16.0.3
+      dotenv-expand: 10.0.0
+      lodash: 4.17.21
+      reflect-metadata: 0.1.13
+      rxjs: 7.5.7
+      uuid: 9.0.0
+    dev: false
 
   /@nestjs/core/9.2.0_jfowmhmgk7kwjudosrpv7e7liy:
     resolution: {integrity: sha512-eVN7aXAavV+ImVt8mO+rQ5YyUP6lJtQKUtQHxHKzz6Wg+9Y67WWZS2uDcDX5NNcNijbWky5bqad86fgcK9Oqig==}
@@ -2321,6 +2341,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dotenv-expand/10.0.0:
+    resolution: {integrity: sha512-GopVGCpVS1UKH75VKHGuQFqS1Gusej0z4FyQkPdwjil2gNIv+LNsqBlboOzpJFZKVT95GkCyWJbBSdFEFUWI2A==}
+    engines: {node: '>=12'}
+    dev: false
 
   /dotenv/16.0.3:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
@@ -5483,3 +5508,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod/3.20.2:
+    resolution: {integrity: sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==}
+    dev: false
